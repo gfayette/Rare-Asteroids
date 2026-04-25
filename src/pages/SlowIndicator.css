@@ -1,0 +1,50 @@
+.slow-container {
+    position: fixed;
+    justify-content: center;
+    z-index: 2002;
+    animation: fadeIn 0.5s ease-in-out;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    left: 0;
+    top: 40px;
+    border-radius: 10%;
+    background-color: #f774;
+}
+
+.slow-container:hover {
+    background-color: var(--menu-button-hover);
+}
+
+@media screen and (min-aspect-ratio: 12/10) {
+    .slow-container {
+        top: 0;
+    }
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .slow-container {
+        top: 8vmin;
+        width: 16vmin;
+        height: 16vmin;
+        margin: 2vmin;
+    }
+}
+
+@media screen and (max-height: 700px) and (min-aspect-ratio: 12/10),
+screen and (max-width: 700px) and (min-aspect-ratio: 12/10) {
+    .slow-container {
+        left: calc(100% - 140px);
+        top: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-height: 500px) and (min-aspect-ratio: 12/10),
+screen and (max-width: 500px) and (min-aspect-ratio: 12/10) {
+    .slow-container {
+        left: calc(100% - 28vmin);
+        top: calc(100% - 20vmin);
+    }
+}

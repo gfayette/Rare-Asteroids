@@ -1,0 +1,118 @@
+.upgrade-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    width: 95%;
+    margin-left: 5%;
+    align-items: center;
+    background-color: var(--upgrade-background);
+    box-shadow: 0px 0px 4px #fffa;
+    border: solid;
+    border-width: 1px;
+    border-color: #fffa;
+}
+
+.upgrade-name {
+    margin-top: 1vmin;
+}
+
+.upgrade-select {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--large-font-size);
+}
+
+.upgrade-level {
+    width: 100px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.caret {
+    width: var(--large-font-size);
+    color: var(--menu-text-color);
+    display: flex;
+}
+
+.caret:hover {
+    color: var(--menu-text-color-disabled);
+}
+
+.upgrade-button {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 3%;
+    background-color: #0000;
+    color: var(--menu-text-color);
+    padding: 2%;
+    border: solid;
+    border-width: 2px;
+    border-color: #0000;
+    border-radius: 10vmin;
+    background-color: var(--upgrade-button-color);
+    box-shadow: 0px 0px 2px var(--upgrade-button-color);
+    font-size: var(--small-font-size);
+}
+
+.upgrade-button-cant-afford {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-bottom: 3%;
+    background-color: #0000;
+    color: var(--menu-text-color-disabled);
+    padding: 2%;
+    border: solid;
+    border-width: 2px;
+    border-color: #0000;
+    font-size: var(--small-font-size);
+}
+
+.upgrade-button-content {
+    display: flex;
+}
+
+@media (pointer: none) or (pointer: fine) {
+    .upgrade-button:hover {
+        border: solid;
+        border-width: 2px;
+        border-color: var(--upgrade-button-color);
+        box-shadow: 0px 0px 8px var(--upgrade-button-color);
+        background-color: var(--upgrade-button-active);
+    }
+}
+
+.upgrade-button:active {
+    border: solid;
+    border-width: 2px;
+    border-color: var(--upgrade-button-color);
+    box-shadow: 0px 0px 8px var(--upgrade-button-color);
+    background-color: var(--upgrade-button-active);
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .caret {
+        width: var(--large-scaled-font-size);
+    }
+
+    .upgrade-select {
+        font-size: var(--large-scaled-font-size);
+    }
+
+    .upgrade-button {
+        font-size: var(--small-scaled-font-size);
+    }
+
+    .upgrade-button-cant-afford {
+        font-size: var(--small-scaled-font-size);
+    }
+
+    .upgrade-level {
+        width: 20vmin;
+    }
+}

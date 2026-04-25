@@ -1,0 +1,33 @@
+.select-title-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 1vmin;
+    height: 60px;
+    justify-content: center;
+    background-color: var(--unlock-button-color);
+    color: var(--menu-text-color);
+    border-radius: 10vmin;
+    font-size: var(--small-font-size);
+}
+
+@media (pointer: none) or (pointer: fine) {
+    .select-title-button:hover {
+        background-color: var(--unlock-button-hover);
+        box-shadow: 0px 0px 1px var(--unlock-button-hover);
+    }
+}
+
+.select-title-button:active {
+    background-color: var(--unlock-button-active);
+    box-shadow: 0px 0px 1px var(--unlock-button-hover);
+}
+
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .select-title-button {
+        height: 12vmin;
+        font-size: var(--small-scaled-font-size)
+    }
+}
