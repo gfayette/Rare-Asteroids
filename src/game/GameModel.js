@@ -170,7 +170,7 @@ export default class GameModel {
 		if (vs < this.vScale) {
 			this.vScale = vs
 		}
-		this.msgScale = wpx > 1400 ? this.vScale * 2.5 : this.vScale * 3.2
+		this.msgScale = window.innerWidth > 800 ? this.vScale * 2.5 : this.vScale * 3.2
 		this.vScale *= this.zoom
 
 		if (this.mainShip != null) {
