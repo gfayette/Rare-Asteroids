@@ -78,6 +78,7 @@ export default class GameState {
     level = 0
     zoom = 1.6
     timeWarp = 1
+    difficulty = 1
     pace = 1
     autoUpgrade = true
     autoUnlock = true

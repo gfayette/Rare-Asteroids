@@ -50,6 +50,10 @@ export default class GameInterface {
         this.game.setBaseTimeWarp(warp)
     }
 
+    setDifficulty(pace) {
+        this.game.setDifficulty(pace)
+    }
+
     setPace(pace) {
         this.game.setPace(pace)
     }

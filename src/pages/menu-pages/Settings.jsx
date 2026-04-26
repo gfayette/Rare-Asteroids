@@ -20,11 +20,12 @@ export default function Settings(props) {
 
     let settings = props.gameInterface.getSettings()
 
-    const [timeWarp, setTimeWarp] = useState(settings[0])
-    const [fieldOfView, setFieldOfView] = useState(settings[1])
-    const [pace, setPace] = useState(settings[2])
-    const [autoUpgrade, setAutoUpgrade] = useState(settings[3])
-    const [autoUnlock, setAutoUnlock] = useState(settings[4])
+    const [fieldOfView, setFieldOfView] = useState(settings[0])
+    const [timeWarp, setTimeWarp] = useState(settings[1])
+    const [difficulty, setDifficulty] = useState(settings[2])
+    const [pace, setPace] = useState(settings[3])
+    const [autoUpgrade, setAutoUpgrade] = useState(settings[4])
+    const [autoUnlock, setAutoUnlock] = useState(settings[5])
     const [stats, setStats] = useState(new Stats())
 
     useEffect(() => {
@@ -65,6 +66,12 @@ export default function Settings(props) {
         const value = parseFloat(event.target.value)
         setTimeWarp(value)
         props.gameInterface.setBaseTimeWarp(value)
+    }
+
+    const handleDifficultyChange = (event) => {
+        const value = parseFloat(event.target.value)
+        setDifficulty(value)
+        props.gameInterface.setDifficulty(value)
     }
 
     const handlePaceChange = (event) => {
@@ -140,7 +147,7 @@ export default function Settings(props) {
                 </div>
                 <div className="settings-container">
                     <div>
-                        Playback {timeWarp.toFixed(2)}x
+                        Speed {timeWarp.toFixed(2)}x
                     </div>
                     <input
                         type="range"
@@ -150,6 +157,20 @@ export default function Settings(props) {
                         step="0.01"
                         value={timeWarp}
                         onChange={handleTimeWarpChange}
+                    />
+                </div>
+                <div className="settings-container">
+                    <div>
+                        Difficulty {(difficulty).toFixed(2)}x
+                    </div>
+                    <input
+                        type="range"
+                        className="settings-range"
+                        min="1"
+                        max="4"
+                        step="0.01"
+                        value={difficulty}
+                        onChange={handleDifficultyChange}
                     />
                 </div>
                 <div className="settings-container">

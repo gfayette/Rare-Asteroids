@@ -220,7 +220,7 @@ export default class ModelStats {
                         props.push(accel[pals])
                         props.push(shield[psls])
                         props.push('Firebat')
-                        props.push('This ship breathes fire. Its thermal weapons and missile launcher can obliterate most asteroids.')
+                        props.push('This ship breathes fire. Its thermal cannons and missile launcher can obliterate most asteroids.')
                         return props
                     case 1:
                         //0: velocity
@@ -267,7 +267,7 @@ export default class ModelStats {
                                 props.push([2.5 + 0.25 * v, -4 - 0.4 * v])
                                 props.push(mass[pdls])
                                 props.push('The projectiles from these cannons are red hot, which really isn\'t all that hot in the grand scheme of things.')
-                                props.push('Red cannons')
+                                props.push('Red Cannons')
                                 props.push(2)
                                 props.push(
                                     [
@@ -309,7 +309,7 @@ export default class ModelStats {
                                 props.push([3.5 + 0.35 * v2, 0])
                                 props.push(mass2[pdls])
                                 props.push('These cannons are the most advanced guns on the firebat, but they\'re still not powerful enough to destroy the rarest of asteroids.')
-                                props.push('Yellow cannons')
+                                props.push('Yellow Cannons')
                                 props.push(2)
                                 props.push(
                                     [
@@ -345,7 +345,7 @@ export default class ModelStats {
                                 props.push([4 + 0.4 * v, -4 - 0.4 * v])
                                 props.push(mass[pdls])
                                 props.push('These cannons pack quite a punch when they\'re fully upgraded.')
-                                props.push('White cannons')
+                                props.push('Water Cannons')
                                 props.push(2)
                                 props.push([
                                     [5 + 0.5 * v, -5 - 0.5 * v],
@@ -365,7 +365,7 @@ export default class ModelStats {
                                 props.push([-0.7 + -0.07 * v2, -4 - 0.4 * v2])
                                 props.push(mass1[pdls])
                                 props.push('These cannons are powerful enough to demolish any type of asteroid.')
-                                props.push('Blue Cannons')
+                                props.push('Heavy Water Cannons')
                                 props.push(2)
                                 props.push([
                                     [0.7 + 0.07 * v2, -5 - 0.5 * v2],

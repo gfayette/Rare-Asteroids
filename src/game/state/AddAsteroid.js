@@ -91,8 +91,8 @@ export default class AddAsteroid {
         a.scoreFadeIn = this.model.scoreFadeIn
         a.scoreFadeOut = this.model.scoreFadeOut
         a.points = this.model.points * sVar * this.game.gameState.pace
-        a.hp = this.model.hp * sVar
-        a.mass = this.model.mass * sVar
+        a.hp = this.model.hp * sVar * this.game.gameState.difficulty
+        a.mass = this.model.mass * sVar * this.game.gameState.difficulty
         a.vx = this.scaledModel.vxVar * (Math.random() - 0.5)
         a.vy = this.scaledModel.vy + this.scaledModel.vyVar * (Math.random() - 0.5)
         a.vr = Math.random() > 0.5 ? this.model.vrMin + Math.random() * this.model.vrVar : -this.model.vrMin - Math.random() * this.model.vrVar
@@ -121,8 +121,8 @@ export default class AddAsteroid {
         a.scoreFadeIn = this.model.scoreFadeIn
         a.scoreFadeOut = this.model.scoreFadeOut
         a.points = this.model.points * 20 * this.game.gameState.pace
-        a.hp = this.model.hp * (1.67 + this.model.num / 15)
-        a.mass = this.model.mass * 5
+        a.hp = this.model.hp * (1.67 + this.model.num / 15) * this.game.gameState.difficulty
+        a.mass = this.model.mass * 5 * this.game.gameState.difficulty
         a.vx = this.scaledModel.vxVar * (Math.random() - 0.5)
         a.vy = this.scaledModel.vy + this.scaledModel.vyVar * (Math.random() - 0.5)
         a.vr = Math.random() > 0.5 ? this.model.vrMin + Math.random() * this.model.vrVar : -this.model.vrMin - Math.random() * this.model.vrVar

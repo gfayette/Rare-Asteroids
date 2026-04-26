@@ -15,27 +15,21 @@ export default class StateStorage {
     }
 
     static loadState = () => {
-        let load = false
         try {
             const savedState = localStorage.getItem('state')
+            const defaultState = new GameStates()
             if (savedState) {
-                this.gameStates = new GameStates()
-                Object.assign(
-                    this.gameStates,
-                    JSON.parse(savedState)
+                const parsedState = JSON.parse(savedState)
+                this.gameStates = Object.assign(
+                    defaultState,
+                    parsedState
                 )
-
-                // Better checks
-                if (this.gameStates.selected != null) {
-                    load = true
-                }
+            } else {
+                this.gameStates = defaultState
             }
         } catch (error) {
             console.error('Error loading game state:', error)
-        } finally {
-            if (!load) {
-                this.gameStates = new GameStates()
-            }
+            this.gameStates = new GameStates()
         }
     }
 

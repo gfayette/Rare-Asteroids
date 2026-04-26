@@ -301,12 +301,16 @@ export default class GameModel {
 	}
 
 	getSettings() {
-		return [this.gameState.timeWarp, this.gameState.zoom, this.gameState.pace, this.gameState.autoUpgrade, this.gameState.autoUnlock]
+		return [this.gameState.zoom, this.gameState.timeWarp, this.gameState.difficulty, this.gameState.pace, this.gameState.autoUpgrade, this.gameState.autoUnlock]
 	}
 
 	setBaseTimeWarp(w) {
 		this.gameState.timeWarp = w
 		this.gameTimeWarp = w
+	}
+
+	setDifficulty(difficulty) {
+		this.gameState.difficulty = difficulty
 	}
 
 	setZoom(zoom) {
