@@ -20,10 +20,7 @@ export default class StateStorage {
             const defaultState = new GameStates()
             if (savedState) {
                 const parsedState = JSON.parse(savedState)
-                this.gameStates = Object.assign(
-                    defaultState,
-                    parsedState
-                )
+                this.gameStates = this.mergeDefaults(defaultState, parsedState)
             } else {
                 this.gameStates = defaultState
             }
@@ -31,6 +28,24 @@ export default class StateStorage {
             console.error('Error loading game state:', error)
             this.gameStates = new GameStates()
         }
+    }
+
+    static mergeDefaults(defaults, saved) {
+        for (const key in defaults) {
+            if (saved[key] === undefined || saved[key] === null) {
+                saved[key] = defaults[key]
+            } else if (
+                typeof defaults[key] === "object" &&
+                defaults[key] !== null &&
+                !Array.isArray(defaults[key]) &&
+                typeof saved[key] === "object" &&
+                saved[key] !== null &&
+                !Array.isArray(saved[key])
+            ) {
+                this.mergeDefaults(defaults[key], saved[key])
+            }
+        }
+        return saved
     }
 
     static clearStorage = () => {
