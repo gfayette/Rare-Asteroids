@@ -365,7 +365,7 @@ export default class ModelStats {
                                 props.push([-0.7 + -0.07 * v2, -4 - 0.4 * v2])
                                 props.push(mass1[pdls])
                                 props.push('These cannons are powerful enough to demolish any type of asteroid.')
-                                props.push('Heavy Water Cannons')
+                                props.push('Air Cannons')
                                 props.push(2)
                                 props.push([
                                     [0.7 + 0.07 * v2, -5 - 0.5 * v2],

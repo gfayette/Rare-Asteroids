@@ -131,6 +131,8 @@ export default class AddState {
     }
 
     loadEffect() {
+        this.game.setLightIntensity(0, 0, 1)
+        this.game.setLightIntensity(0, 0, 1)
         if (!this.game.gameState.chargedWeapons[this.game.gameState.ship].unlocked) {
             this.game.specialEffect = new NoEffect(this.game)
         } else {
