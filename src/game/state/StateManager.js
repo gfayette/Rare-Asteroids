@@ -195,7 +195,7 @@ export default class StateManager {
         if (this.game.gameState.ships[index].unlocked) {
             this.game.gameState.ship = index
             this.game.setLightIntensity(0, 0, 1)
-            this.game.setLightIntensity(0, 0, 1)
+            this.game.setLightIntensity(0, 0, 2)
             this.game.specialEffect = new SwitchShip(this.game)
         }
     }
@@ -336,7 +336,7 @@ export default class StateManager {
             this.game.gameState.activeAsteroids[this.game.gameState.level] = index
             let [bgColor, starColorFade] = this.addState.getBgColors(this.game.gameState.level, this.game.gameState.activeAsteroids[this.game.gameState.level])
             this.game.setLightIntensity(0, 0, 1)
-            this.game.setLightIntensity(0, 0, 1)
+            this.game.setLightIntensity(0, 0, 2)
             this.game.specialEffect = new Warp(10, 50, bgColor, starColorFade, this.game)
             return true
         }
