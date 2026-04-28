@@ -124,7 +124,8 @@ export default function Settings(props) {
                         </svg>
                         <div className="performance-text">
                             Ope! It looks like this game isn't running well on your device!
-                            I'd recommend a different device as it's meant to be played at 60 fps.
+                            If refreshing the page or changing your browser's performance settings doesn't fix the issue,
+                            then I'd recommend a different device, as it's meant to be played at 60 fps.
                         </div>
                         <div className="performance-button">
                             <SelectTitle
