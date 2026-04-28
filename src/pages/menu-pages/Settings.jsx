@@ -28,6 +28,8 @@ export default function Settings(props) {
     const [autoUnlock, setAutoUnlock] = useState(settings[5])
     const [stats, setStats] = useState(new Stats())
 
+    const [showWarning, setShowWarning] = useState(props.slow)
+
     useEffect(() => {
         let runLoop = true
 
@@ -94,13 +96,14 @@ export default function Settings(props) {
 
     const dismissClicked = (e) => {
         props.dismissSlow()
+        setShowWarning(false)
     }
 
     return (
         <div>
             Settings
             <div className="settings-panel">
-                {props.slow &&
+                {showWarning &&
                     <div className="performance-container">
                         <svg className="performance-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
                             <g id="SVGRepo_bgCarrier" strokeWidth="10"></g>
