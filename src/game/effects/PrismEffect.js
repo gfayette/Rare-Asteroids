@@ -20,7 +20,7 @@ export default class PrismEffect {
     wm0 = 1
 
     startComplete = 0
-    startDuration = 1
+    startDuration = 1.4
 
     blastComplete = 0
     blastDuration = 1

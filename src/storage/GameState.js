@@ -63,7 +63,7 @@ class ChargeWeaponState {
 }
 
 class ScoreState {
-    points = 1
+    points = 0
     pd = 0
 }
 
