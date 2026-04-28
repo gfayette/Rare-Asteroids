@@ -17,8 +17,8 @@ export default class StateStorage {
     static loadState = () => {
         try {
             const savedState = localStorage.getItem('state')
+            this.gameStates = new GameStates()
             if (savedState) {
-                this.gameStates = new GameStates()
                 Object.assign(
                     this.gameStates,
                     JSON.parse(savedState)
