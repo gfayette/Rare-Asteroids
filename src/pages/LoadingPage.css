@@ -1,0 +1,16 @@
+.loading-page {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 40vh;
+    background-color: #000f;
+    font-size: var(--default-font-size);
+    z-index: 1010;
+}
+
+.textures {
+    padding-top: 5vh;
+}

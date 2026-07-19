@@ -1,0 +1,80 @@
+.menu-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: var(--menu-button-color);
+    background-color: var(--menu-button-color);
+}
+
+.menu-button-current {
+    border-color: var(--menu-border);
+}
+
+.menu-button-upgrade {
+    position: absolute;
+    animation: fadeIn 1s ease-in-out;
+    width: 35px;
+    height: 35px;
+    top: -20px;
+    right: -15px;
+}
+
+@media (pointer: none) or (pointer: fine) {
+    .menu-button:hover {
+        background-color: var(--menu-button-hover);
+    }
+}
+
+.menu-button:active {
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: var(--menu-border);
+    background-color: var(--menu-button-active);
+}
+
+.icon-container {
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+    line-height: 80%;
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(-180deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .menu-button {
+        width: 10vmin;
+        height: 10vmin;
+        margin: 1vmin;
+    }
+
+    .menu-button-current {
+        width: 10vmin;
+        height: 10vmin;
+        margin: 1vmin;
+    }
+
+    .menu-button-upgrade {
+        width: 7vmin;
+        height: 7vmin;
+        top: -4vmin;
+        right: -3vmin;
+    }
+}

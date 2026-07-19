@@ -1,0 +1,145 @@
+.performance-container {
+    width: 100%;
+    margin-top: 35px;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--menu-text-color);
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px var(--menu-text-color);
+}
+
+.performance-icon {
+    width: 70px;
+    margin-top: 10px;
+}
+
+.performance-button {
+    margin: 15px;
+}
+
+.performance-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--tiny-font-size);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.settings-panel {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--small-font-size);
+    align-items: start;
+    margin-bottom: 20px;
+    width: var(--menu-panel-width);
+}
+
+.settings-title {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.settings-container {
+    width: 100%;
+    color: var(--menu-text-color-disabled);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.settings-range {
+    width: 100%;
+    flex: 0 0 50%;
+}
+
+.settings-stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--menu-text-color-disabled);
+    white-space: nowrap;
+}
+
+.settings-stats-name {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.settings-stats-value {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.settings-check {
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+
+.settings-check:checked::before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-width='3' d='M6 10l3 3 6-6'/%3e%3c/svg%3e");
+}
+
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .performance-container {
+        margin-top: 7vmin;
+    }
+
+    .performance-icon {
+        width: 14vmin;
+        margin-top: 2vmin;
+    }
+
+    .performance-button {
+        margin: 3vmin;
+    }
+
+    .performance-text {
+        margin-left: 2vmin;
+        margin-right: 2vmin;
+        font-size: var(--tiny-scaled-font-size);
+    }
+
+    .settings-panel {
+        font-size: var(--small-scaled-font-size);
+        width: var(--menu-panel-scaled-width);
+        margin-bottom: 4vmin;
+    }
+
+    .settings-title {
+        margin-top: 7vmin;
+        margin-bottom: 3vmin;
+    }
+
+    .settings-container {
+        margin-top: 2vmin;
+    }
+
+    .settings-stats-container {
+        font-size: var(--small-scaled-font-size);
+    }
+
+    .settings-stats-name {
+        margin-right: 2vmin;
+    }
+
+    .settings-stats-value {
+        margin-left: 2vmin;
+    }
+
+    .settings-check {
+        background-color: #fff;
+        width: 4vmin;
+        height: 4vmin;
+        margin-left: 3vmin;
+    }
+}

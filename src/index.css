@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'MainFont';
+  src: local('MainFont'), url(./Tektur-VariableFont.ttf) format('truetype');
+}
+
+:root {
+  --default-font-size: 32px;
+  --scaled-font-size: 6.4vmin;
+
+  --large-font-size: 48px;
+  --large-scaled-font-size: 9.6vmin;
+
+  --small-font-size: 24px;
+  --small-scaled-font-size: 4.8vmin;
+
+  --tiny-font-size: 20px;
+  --tiny-scaled-font-size: 4vmin;
+
+  --menu-background: #161719e2;
+  --upgrade-header: #f0f9ff40;
+  --upgrade-background: #f0f9ff20;
+
+  --menu-border: #e2e2e2;
+  --menu-text-color: #f2f1f3;
+  --menu-text-color-disabled: #f2f1f370;
+
+  --menu-button-color: #0000;
+  --menu-button-hover: #fff4;
+  --menu-button-active: #fff0;
+
+  --upgrade-button-active: #0008;
+  --upgrade-button-color: #49C043;
+  --description-color: #bababa;
+
+
+  --unlock-button-color: #0000;
+  --unlock-button-hover: #fff4;
+  --unlock-button-active: #fff4;
+
+  --menu-panel-width: 400px;
+  --menu-panel-scaled-width: 80vmin;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  transform: translateZ(0);
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  touch-action: manipulation;
+  -webkit-user-drag: none;
+  -ms-content-zooming: none;
+  word-wrap: break-word;
+  overscroll-behavior-y: none;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: flex;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  text-transform: none;
+  cursor: pointer;
+  all: unset;
+  font: inherit;
+}

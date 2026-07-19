@@ -1,0 +1,20 @@
+.all {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'MainFont';
+
+  color: var(--menu-text-color);
+  font-size: var(--default-font-size);
+  background-color: #000;
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+  .all {
+    font-size: var(--scaled-font-size);
+  }
+}

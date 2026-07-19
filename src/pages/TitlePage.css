@@ -1,0 +1,66 @@
+.title-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    top: 45%;
+    align-items: center;
+    z-index: 1000;
+    color: var(--menu-text-color);
+    font-size: 20px;
+}
+
+.title-row {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.title-game {
+    width: 100px;
+    padding: 5px;
+}
+
+.title-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background-color: #fff2;
+    margin-right: 10px;
+    border-radius: 1vmin;
+    color: var(--menu-text-color);
+    font-size: 20px;
+}
+
+@media (pointer: none) or (pointer: fine) {
+    .title-button:hover {
+        background-color: var(--menu-button-hover);
+    }
+}
+
+.title-button:active {
+    background-color: var(--menu-button-hover);
+}
+
+@media screen and (max-height: 500px),
+screen and (max-width: 500px) {
+    .title-container {
+        font-size: 4vmin;
+    }
+
+    .title-row {
+        margin: 1vmin;
+    }
+
+    .title-game {
+        width: 20vmin;
+        padding: 1vmin;
+    }
+
+    .title-button {
+        width: 16vmin;
+        margin-right: 2vmin;
+        font-size: 4vmin;
+    }
+}

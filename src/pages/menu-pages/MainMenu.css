@@ -1,0 +1,64 @@
+.main-container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-text {
+    font-size: 60px;
+}
+
+.gap {
+    height: 40px;
+}
+
+.main-button {
+    background-color: #0000;
+    height: 60px;
+}
+
+@media (pointer: none) or (pointer: fine) {
+    .main-button:hover {
+        background-color: var(--menu-button-hover);
+    }
+}
+
+.main-button:active {
+    background-color: #0000;
+}
+
+@media screen and (max-height: 500px) {
+    .main-container {
+        padding-top: 6vmin;
+    }
+
+    .main-text {
+        font-size: 12vmin;
+    }
+
+    .gap {
+        height: 8vmin;
+    }
+
+    .main-button {
+        height: 12vmin;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-container {
+        padding-top: 6vmin;
+    }
+
+    .main-text {
+        font-size: 12vmin;
+    }
+
+    .gap {
+        height: 8vmin;
+    }
+
+    .main-button {
+        height: 12vmin;
+    }
+}
